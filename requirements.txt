@@ -1,0 +1,12 @@
+flask
+flask-cors
+pillow
+gTTS
+moviepy
+numpy
+# Optional for Stable Diffusion:
+torch
+diffusers
+transformers
+accelerate
+safetensors
