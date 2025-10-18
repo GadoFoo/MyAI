@@ -1,6 +1,3 @@
-Sure! Here’s the full `app.py` written normally and fully ready-to-run for your Prompt → Video generator:
-
-```python
 import os
 import shutil
 import subprocess
@@ -163,5 +160,6 @@ def generate():
 
 if __name__ == '__main__':
     print('Stable Diffusion available:', SD_AVAILABLE)
-    app.run(host='0.0.0.0', port=5000, debug=True)
-```
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
