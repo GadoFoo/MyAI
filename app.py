@@ -91,7 +91,7 @@ def placeholder_generate_frames(prompt, frames, w=512, h=512):
         out.append(path)
     return out
 
-@app.route('/generate', methods=['POST'])
+@app.route('myai-production-546e.up.railway.app', methods=['POST'])
 def generate():
     data = request.get_json()
     prompt = data.get('prompt', 'A colorful cartoon')[:512]
@@ -162,4 +162,5 @@ if __name__ == '__main__':
     print('Stable Diffusion available:', SD_AVAILABLE)
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
+
 
